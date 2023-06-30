@@ -5,7 +5,8 @@ A 046211 - Deep Learning course final project at Technion's ECE faculty. <br>
 <img src="./assets/music-box-of-sleep.gif"></div>
 
 <br>
-This project modifies an existing [LSTM-based model architecture](https://github.com/SudharshanShanmugasundaram/Music-Generation.git) designed to generate piano music and changes the architecture to use an RWKV model over the LSTM. <br>
+
+This project modifies an existing [LSTM-based model architecture](https://github.com/SudharshanShanmugasundaram/Music-Generation) designed to generate piano music and changes the architecture to use an RWKV model over the LSTM. <br>
 The architecture comparison is based on the validation loss achieved and the quality of the music they generate.
 
 ## Agenda
@@ -23,7 +24,16 @@ The architecture comparison is based on the validation loss achieved and the qua
 TL;DR - This project modifies an existing [LSTM-based model architecture](https://github.com/SudharshanShanmugasundaram/Music-Generation.git)  designed to generate piano music and changes the architecture to use an RWKV model over the LSTM. The RWKV model achieved better validation loss, and the generated music sounds better (at least to us:wink:).
 
 ### Baseline LSTM-based
-#### LSTM 
+#### LSTM - Long Short-Term Memory
+* Long short-term memory (LSTM) is a type of recurrent cell that tries to preserve long-term information. The idea of LSTM was presented in 1997 but flourished in the age of deep learning.\n",
+    * LSTM introduces a memory cell with the same shape as the hidden state, engineered to record additional information.
+    * The memory is controlled by 3 main gates: 
+        * **Input gate**: decides when to read data into the cell.
+        * **Output gate**: outputs the entries from the cell.
+        * **Forget gate**: a mechanism to reset the content of the cell.
+    * These gates learn which information is relevant to forget or remember during the training process. The gates contain a sigmoid activation function.
+
+
 ### RWKV Music Generator Model Architecture
 
 
