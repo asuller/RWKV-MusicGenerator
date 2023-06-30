@@ -1,0 +1,6 @@
+[submodule "Music-Generation"]
+	path = Music-Generation
+	url = https://github.com/SudharshanShanmugasundaram/Music-Generation.git
+[submodule "RWKV-LM"]
+	path = RWKV-LM
+	url = https://github.com/BlinkDL/RWKV-LM.git
