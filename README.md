@@ -51,8 +51,14 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 
 ### RWKV Music Generator Model Architecture
 #### RWKV - Receptence, Weight, Key, and Value
+* Presented in the paper [RWKV: Reinventing RNNs for the Transformer Era](https://arxiv.org/abs/2305.13048)
+* Traditional RNN models are unable to utilize very long contexts. However, RWKV can utilize thousands of tokens and beyond.
+*  Traditional RNN models cannot be parallelized when training. RWKV is similar to a “linearized GPT” and it trains faster than GPT.
 * RWKV is an attention-free, parallelizable RNN, which reaches transformer-level language model performance.
-* Using channel-mixing and Time-mixing it imitates the attention mechanism.
+* Using channel-mixing and Time-mixing it imitates the attention mechanism. From the 
+<div style="text-align:center"><img src="./assets/RWKV-arch.png" width="250" height="350" ><img src="./assets/RWKV-formula.png" width="500" height="350" ></div>
+
+####
 
 ## Installation
 
