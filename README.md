@@ -5,8 +5,8 @@ A 046211 - Deep Learning course final project at Technion's ECE faculty. <br>
 <img src="./assets/music-box-of-sleep.gif"></div>
 
 <br>
-This project modifies an existing [LSTM-based model architecture](https://github.com/SudharshanShanmugasundaram/Music-Generation.git) designed to generate piano music, and changes the architecture to use a RWKV model over the LSTM. <br>
-The architectures comparison is based on the validation loss achieved and the quality of the music they generate.
+This project modifies an existing [LSTM-based model architecture](https://github.com/SudharshanShanmugasundaram/Music-Generation.git) designed to generate piano music and changes the architecture to use an RWKV model over the LSTM. <br>
+The architecture comparison is based on the validation loss achieved and the quality of the music they generate.
 
 ## Agenda
 
@@ -20,7 +20,7 @@ The architectures comparison is based on the validation loss achieved and the qu
 
 ## Project Overview
 
-TL;DR - This project modifies an existing [LSTM-based model architecture](https://github.com/SudharshanShanmugasundaram/Music-Generation.git) designed to generate piano music, and changes the architecture to use a RWKV model over the LSTM. The RWKV model acheieved better validation loss, and the genereted music sounds better (at least to us :wink:).
+TL;DR - This project modifies an existing [LSTM-based model architecture](https://github.com/SudharshanShanmugasundaram/Music-Generation.git)  designed to generate piano music and changes the architecture to use an RWKV model over the LSTM. The RWKV model achieved better validation loss, and the generated music sounds better (at least to us:wink:).
 
 ### Baseline LSTM-based
 #### LSTM 
