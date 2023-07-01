@@ -82,26 +82,22 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 * The RWKV model achieves a significantly better loss score over the validation set than the LSTM-based model.
 * It can be also seen that the train loss is a bit lower for the RWKV. The RWKV constantly got lower loss over the first epoch.
 
-
-
 ### Quality Comparison
 * Comparing the results by hearing the generated music
-* The LSTM-based model generated the following [melody](./assets/sample_lstm_orig.wav).
-* The RWKV-based model generated the following [melody](./assets/sample_rwkv.wav).
+   * The LSTM-based model generated the following [melody](./assets/sample_lstm_orig.wav).
+   * The RWKV-based model generated the following [melody](./assets/sample_rwkv.wav).
 
-## Installation
 
-Provide step-by-step instructions on how to install and set up the project. Include any prerequisites, dependencies, or environment setup required. You can use bullet points or code blocks to provide clear instructions.
+* Another quality comparison method is to compare the graphs that represent the pressed keys.
+     * Original melody:
+       <div style="text-align:center"><img src="./assets/original-graph.png" width="400" height="250" ></div>
+     * LSTM-based generated melody:
+       <div style="text-align:center"><img src="./assets/LSTM-sample-graph.png" width="400" height="250" ></div>
+     * RWKV-based generated melody:
+       <div style="text-align:center"><img src="./assets/RWKV-sample-graph.png" width="400" height="250" ></div>
+       
 
 ## Usage
 
 Provide examples and instructions on how to use the project. Explain the different components, modules, or functions available and how they can be utilized. Include code snippets or command examples if applicable.
-
-## Acknowledgements
-
-Acknowledge and give credit to any individuals, organizations, or open-source projects that have contributed to the project or influenced its development. Mention any external resources, references, or research papers that were used or referred to during the project.
-
-## Contact
-
-Provide contact information for the project maintainer or team. Include an email address or a link to a contact form. Optionally, you can include links to social media profiles or a dedicated project website.
 
