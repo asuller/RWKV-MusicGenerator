@@ -104,4 +104,4 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 * In the code directory there are two notebooks:
      * RWKV-MusicGenerator - for local use. It requires cuda available on your sysyem.
      * Kaggle-RWKVGenerator - a notebook to import to kaggle and run it on their cuda accelerator (the notebook includes cloning all relevant files and kaggle internal paths)
-* After running each of the models you can generate a midi file (.mid) that can be converted to wav using any online midi to wav convertor (We used [this one](https://audio.online-convert.com/convert/midi-to-wav) 
+* After running each of the models you can generate a midi file (.mid) that can be converted to wav using any online midi to wav convertor (We used [this one](https://audio.online-convert.com/convert/midi-to-wav))
