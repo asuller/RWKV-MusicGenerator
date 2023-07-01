@@ -69,11 +69,11 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
    * Took time 
 * Adapt the RWKV model to the Nottingham data:
    * Instead of the inner embedding layer we are using a linear layer with vocabulary size input, and embedding size output
-      * It was done beacuse the input to the model is an embed of data
+      * It was done because the input to the model is an embed of data
          * And anyway - the embedded performed was not good for this mission
-         * And we did not wanted to embed twice
+         * And we did not want to embed twice
 * Finally - Train the model and sample music.
-* Got better results as described in next part. 
+* Got better results as described in the next part. 
 
 ## Performance Comparison
 
