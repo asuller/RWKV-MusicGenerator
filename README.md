@@ -1,6 +1,8 @@
 # RWKV Based Music Generator
 
 A 046211 - Deep Learning course final project at Technion's ECE faculty. <br>
+[Liad Perl](https://www.linkedin.com/in/liad-perl-a925551b7/) and [Ariel Suller](https://www.linkedin.com/in/ariel-suller-23300214b/)
+
 <div style="text-align:center"><img src="./assets/canthelpfallinginlove-loveisintheair.gif">
 <img src="./assets/music-box-of-sleep.gif"></div>
 
