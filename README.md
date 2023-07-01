@@ -30,7 +30,7 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 
 ### Baseline: LSTM-based Generator
 #### LSTM - Long Short-Term Memory
-* Long short-term memory (LSTM) is a type of recurrent cell that tries to preserve long-term information. The idea of LSTM was presented in 1997 but flourished in the age of deep learning.\n",
+* Long short-term memory (LSTM) is a type of recurrent cell that tries to preserve long-term information. The idea of LSTM was presented in 1997 but flourished in the age of deep learning.
     * LSTM introduces a memory cell with the same shape as the hidden state, engineered to record additional information.
     * The memory is controlled by 3 main gates: 
         * **Input gate**: decides when to read data into the cell.
