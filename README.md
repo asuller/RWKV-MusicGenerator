@@ -12,6 +12,7 @@ This project modifies an existing [LSTM-based model architecture](https://github
 The architecture comparison is based on the validation loss achieved and the quality of the music they generate.
 
 ## Agenda
+- [Project Overview](#project-overview)
 - [Baseline: LSTM-based Generator](#baseline-lstm-based-generator)
   - [LSTM - Long Short-Term Memory](#lstm---long-short-term-memory)
   - [LSTM Music Generator Model](#lstm-music-generator-model)
