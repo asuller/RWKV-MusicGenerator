@@ -40,7 +40,7 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
   * **Output gate**: $$O_t = \\sigma(X_tW_{xo} +H_{t-1}W_{ho} +b_o) \\in \\mathbb{R}^{n\\times o}$$
 [ Taken from [ee046211-deep-learning tutorial 07](https://github.com/taldatech/ee046211-deep-learning/blob/e74644e4ae206207dc1de037dee2d0fe9c93fb89/ee046211_tutorial_07_sequential_tasks_rnn.ipynb) ]
 
-#### LSTM Music Generator Model Architecture
+#### LSTM Music Generator Model
 * The architecture used for Piano Music Generation is a conditional character-level language model based on LSTM cells.
 * The model is trained over part of the [Nottingham dataset](https://paperswithcode.com/dataset/nottingham) which consists of piano songs represented as piano pitches matrice and time-frequency matrice.
 * So the model needs to predict:
@@ -49,16 +49,32 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 * After the training over the dataset, we can sample from the model - make it compose new music.
 <br> [ More about the model - [Blog](http://warmspringwinds.github.io/pytorch/rnns/2018/01/27/learning-to-generate-lyrics-and-music-with-recurrent-neural-networks/), [GitHub](https://github.com/SudharshanShanmugasundaram/Music-Generation) ]
 
-### RWKV Music Generator Model Architecture
+### RWKV-based Generator
 #### RWKV - Receptence, Weight, Key, and Value
 * Presented in the paper [RWKV: Reinventing RNNs for the Transformer Era](https://arxiv.org/abs/2305.13048)
 * Traditional RNN models are unable to utilize very long contexts. However, RWKV can utilize thousands of tokens and beyond.
 *  Traditional RNN models cannot be parallelized when training. RWKV is similar to a “linearized GPT” and it trains faster than GPT.
 * RWKV is an attention-free, parallelizable RNN, which reaches transformer-level language model performance.
-* Using channel-mixing and Time-mixing it imitates the attention mechanism. From the 
+* Using channel-mixing and Time-mixing it imitates the attention mechanism. From the paper:
 <div style="text-align:center"><img src="./assets/RWKV-arch.png" width="250" height="350" ><img src="./assets/RWKV-formula.png" width="500" height="350" ></div>
 
-####
+#### RWKV Music Generator Model
+* All RWKV repositories we have found were used to generate text (sort of a ChatGPT).
+   * None of those repos' had an architecture designed to get a two-dimensional input like our input (as described in [LSTM Music Generator Model Architecture](#lstm-music-generator-model-architecture) ).
+* Our Main challenge was to take an excisting RWKV model and adapt it to get and return the two matrices described
+* In order to do so, we took RWKV-v4neo from [BlinkDL/RWKV-LM](https://github.com/BlinkDL/RWKV-LM)
+* First - "take out" the LSTM and replace it with the RVKV head - and make it work over the cuda.
+   * Took time 
+* Adapt the RWKV model to the Nottingham data:
+   * Instead of the inner embedding layer we are using a linear layer with vocabulary size input, and embedding size output
+      * It was done beacuse the input to the model is an embed of data
+         * And anyway - the embedded performed was not good for this mission
+         * And we did not wanted to embed twice
+* Finally - Train the model and sample music.
+* Got better results as described in next part. 
+
+## Performance Comparison
+
 
 ## Installation
 
