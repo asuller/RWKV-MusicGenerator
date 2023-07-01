@@ -1,0 +1,12 @@
+pytorch-lightning==2.0.4
+torch==2.0.1
+matplotlib==3.7.1
+matplotlib-inline==0.1.6
+mido==1.2.10
+scikit-image==0.21.0
+scipy==1.11.1
+ipykernel==6.23.3
+ipython==8.14.0
+ipython-genutils==0.2.0
+numpy==1.25.0
+ninja==1.11.1
