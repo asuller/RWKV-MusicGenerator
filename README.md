@@ -63,12 +63,12 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 #### RWKV Music Generator Model
 * All RWKV repositories we have found were used to generate text (sort of a ChatGPT).
    * None of those repos' had an architecture designed to get a two-dimensional input like our input (as described in [LSTM Music Generator Model Architecture](#lstm-music-generator-model-architecture) ).
-* Our Main challenge was to take an excisting RWKV model and adapt it to get and return the two matrices described
+* Our Main challenge was to take an existing RWKV model and adapt it to get and return the two matrices described
 * In order to do so, we took RWKV-v4neo from [BlinkDL/RWKV-LM](https://github.com/BlinkDL/RWKV-LM)
 * First - "take out" the LSTM and replace it with the RVKV head - and make it work over the cuda.
    * Took time 
 * Adapt the RWKV model to the Nottingham data:
-   * Instead of the inner embedding layer we are using a linear layer with vocabulary size input, and embedding size output
+   * Instead of the inner embedding layer we are using a linear layer with vocabulary size input and embedding size output
       * It was done because the input to the model is an embed of data
          * And anyway - the embedded performed was not good for this mission
          * And we did not want to embed twice
@@ -76,6 +76,16 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 * Got better results as described in the next part. 
 
 ## Performance Comparison
+### Losses Comparison 
+* Training the models over Nottingham Dataset for 10 epochs achieved the following results:
+<div style="text-align:center"><img src="./assets/Train-graph.png" width="400" height="250" ><img src="./assets/Validation-graph.png" width="400" height="250" ></div>
+* The RWKV model achieves a significantly better loss score over the validation set than the LSTM-based model.
+* It can be also seen that the train loss is a bit lower for the RWKV. The RWKV constantly got lower loss over the first epoch.
+
+### Quality Comparison
+* Comparing the results by hearing the generated music.
+* The LSTM-based model generated the following melody:
+  
 
 
 ## Installation
