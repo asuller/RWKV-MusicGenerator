@@ -12,14 +12,16 @@ This project modifies an existing [LSTM-based model architecture](https://github
 The architecture comparison is based on the validation loss achieved and the quality of the music they generate.
 
 ## Agenda
-
-- [Project Overview](#project-overview)
-- [RWKV Music Generator Model Architecture](#rwkv-music-generator-model-architecture)
-- [RWKV Model Compared To LSTM Based Modoel](#rwkv-music-generator-model-architecture)
-- [Installation](#installation)
+- [Baseline: LSTM-based Generator](#baseline-lstm-based-generator)
+  - [LSTM - Long Short-Term Memory](#lstm---long-short-term-memory)
+  - [LSTM Music Generator Model](#lstm-music-generator-model)
+- [RWKV-based Generator](#rwkv-based-generator)
+  - [RWKV - Receptence, Weight, Key, and Value](#rwkv---receptence-weight-key-and-value)
+  - [RWKV Music Generator Model](#rwkv-music-generator-model)
+- [Performance Comparison](#performance-comparison)
+  - [Losses Comparison](#losses-comparison)
+  - [Quality Comparison](#quality-comparison)
 - [Usage](#usage)
-- [Acknowledgements](#acknowledgements)
-- [Contact](#contact)
 
 ## Project Overview
 
