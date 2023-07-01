@@ -82,11 +82,12 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 * The RWKV model achieves a significantly better loss score over the validation set than the LSTM-based model.
 * It can be also seen that the train loss is a bit lower for the RWKV. The RWKV constantly got lower loss over the first epoch.
 
-### Quality Comparison
-* Comparing the results by hearing the generated music.
-* The LSTM-based model generated the following melody:
-  
 
+
+### Quality Comparison
+* Comparing the results by hearing the generated music
+* The LSTM-based model generated the following [melody](./assets/sample_lstm_orig.wav).
+* The RWKV-based model generated the following [melody](./assets/sample_rwkv.wav).
 
 ## Installation
 
