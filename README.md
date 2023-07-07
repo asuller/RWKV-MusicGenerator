@@ -47,10 +47,8 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 
 #### LSTM Music Generator Model
 * The architecture used for Piano Music Generation is a conditional character-level language model based on LSTM cells.
-* The model is trained over part of the [Nottingham dataset](https://paperswithcode.com/dataset/nottingham) which consists of piano songs represented as piano pitches matrice and time-frequency matrice.
-* So the model needs to predict:
-   *  The next pitches based on the previously played pitches
-   *  The Time-Frequency matrice ("How long the pitch is pressed")
+* The model is trained over part of the [Nottingham dataset](https://paperswithcode.com/dataset/nottingham) which consists of piano songs represented as piano rolls. This representation is a time-frequency matrix where each row is a different MIDI pitch, and each column is a different slice in time..
+* So the model aims to predict the next pitches based on the previously played pitches which is the next columns of piano roll matrix.
 * After the training over the dataset, we can sample from the model - make it compose new music.
 <br> [ More about the model - [Blog](http://warmspringwinds.github.io/pytorch/rnns/2018/01/27/learning-to-generate-lyrics-and-music-with-recurrent-neural-networks/), [GitHub](https://github.com/SudharshanShanmugasundaram/Music-Generation) ]
 
@@ -66,7 +64,7 @@ TL;DR - This project modifies an existing [LSTM-based model architecture](https:
 #### RWKV Music Generator Model
 * All RWKV repositories we have found were used to generate text (sort of a ChatGPT).
    * None of those repos' had an architecture designed to get a two-dimensional input like our input (as described in [LSTM Music Generator Model Architecture](#lstm-music-generator-model-architecture) ).
-* Our Main challenge was to take an existing RWKV model and adapt it to get and return the two matrices described
+* Our Main challenge was to take an existing RWKV model and adapt it to get and return the same input and output as decribed above.
 * In order to do so, we took RWKV-v4neo from [BlinkDL/RWKV-LM](https://github.com/BlinkDL/RWKV-LM)
 * First - "take out" the LSTM and replace it with the RVKV head - and make it work over the cuda.
    * Took time 
